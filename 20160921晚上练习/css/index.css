@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 57.5px;
+}
+
+body {
+    font-size: .2rem;
+    color: #333;
+}
+
+div {
+    display: block;
+}
+
+.page-index {
+    background: #FFF;
+    padding-bottom: 1rem;
+}
+
+.page-index input {
+    background-color: rgba(128, 128, 128, 0.31);
+    width: 100%;
+    height: 44px;
+    border-style: hidden;
+    font-size: 0.3rem;
+}
+
+.page-index .list .item {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    padding: .3rem 0;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.page-index .list .img {
+    width: 2.54rem;
+    height: 1.45rem;
+    position: relative;
+}
+
+.page-index .list .img .ico {
+    width: 100%;
+}
+
+.page-index .list .info {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    width: 100%;
+    margin-right: .2rem;
+}
+
+.page-index .list .name {
+    font-size: .3rem;
+    color: #000;
+    margin-bottom: .1rem;
+}
+
+.page-index .list .brief {
+    font-size: .26rem;
+    line-height: .34rem;
+    color: #969696;
+    margin-bottom: .12rem;
+}
+
+.page-index .list .price {
+    font-size: .28rem;
+    color: #FE4900;
+}
+
+.page-index .list .img .tag {
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    bottom: 0;
+    left: .1rem;
+    opacity: .9!important;
+    z-index: 2;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFF;
+    z-index: 99;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer ul {
+    display: box;
+    display: -webkit-box;
+    box-align: center;
+    -webkit-box-align: center;
+    box-pack: center;
+    -webkit-box-pack: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer li {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.footer li>a {
+    display: block;
+    padding: .12rem 0;
+}
+.footer .nav .ispr {
+    width: .4rem;
+    height: .4rem;
+    background-image: url(http://s1.mi.com/m/images/m/spr1.png);
+    -webkit-background-size: .4rem 3.2rem;
+    -moz-background-size: .4rem 3.2rem;
+    -ms-background-size: .4rem 3.2rem;
+    -o-background-size: .4rem 3.2rem;
+    background-size: .4rem 3.2rem;
+    overflow: hidden;
+    margin: 0 auto .08rem;
+}
+.footer li>a.on .nav .ispr.ih {
+    background-position-y: -2.4rem;
+}
+.footer .nav .ispr.ic {
+    background-position-y: -.4rem;
+}
+.footer .nav .ispr.is {
+    background-position-y: -1.2rem;
+}
+.footer .nav .ispr.if {
+    background-position-y: -2rem;
+}
+.footer .nav p {
+    font-size: .22rem;
+    line-height: .8;
+    color: #999;
+    text-decoration: underline;
+    margin: 0;
+}
