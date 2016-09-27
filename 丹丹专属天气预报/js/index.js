@@ -1,7 +1,11 @@
+// http默认端口号为80  https的默认端口号为443
+// getWeatherInfo("合阳");
 function doSearch(){
 
   var cityname =document.querySelector('#cityname').value;
   getWeatherInfo(cityname);
+
+
 }
 // 获取cityCode
 function getWeatherInfo(cityName){
@@ -19,6 +23,7 @@ function getWeatherInfo(cityName){
     // return(cityInfo.retData['cityCode']);
 
     getCityCodeAndCityName((cityInfo.retData['cityCode']),(cityInfo.retData['cityName']));
+
 
 
     },
@@ -41,7 +46,7 @@ $.ajax({
   },
   dataType:'json',
   success:function(data){
-      // console.log(data.retData);
+      console.log(data);
       // 未来天气
       var forecastCityArr =data.retData['forecast'];
     var arr=[];
@@ -65,7 +70,7 @@ $.ajax({
       arr1.push(arr[obj]);
 
     }
-    console.log(arr1);
+    // console.log(arr1);
 
 
 
@@ -75,7 +80,7 @@ $.ajax({
     var obj ={};
 
     obj.date=todayCityArr.date;
-    console.log(obj.date);
+    // console.log(obj.date);
     obj.week=todayCityArr.week;
     obj.hightemp=todayCityArr.hightemp;
     obj.lowtemp =todayCityArr.lowtemp;
@@ -105,7 +110,7 @@ $.ajax({
 
   });
 
-    console.log(arr1);
+    // console.log(arr1);
     var html =template('text',{list:arr1});
     document.querySelector('#content').innerHTML=html;
 
