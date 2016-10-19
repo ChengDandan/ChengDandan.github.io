@@ -1,6 +1,6 @@
 app.controller('bookListController',['$scope','commonService','$routeParams',function($scope,b_service,$routeParams){
   console.log($routeParams.id);
-b_service.getData('$routeParams.id',function(res){
+b_service.getData($routeParams.id,function(res){
   // console.dir(res);
 });
 }]);
