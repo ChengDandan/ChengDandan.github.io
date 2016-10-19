@@ -1,5 +1,5 @@
-app.controller('bookListController',['$scope','commonService',function($scope,c_service){
-c_service.getData('ertong',function(res){
+app.controller('bookListController',['$scope','commonService',function($scope,b_service){
+b_service.getData('ertong',function(res){
   console.dir(res);
 });
 }]);
