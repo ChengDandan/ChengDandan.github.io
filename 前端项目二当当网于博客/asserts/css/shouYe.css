@@ -8,6 +8,7 @@ body {
     height: 100%;
     background-image: url('../img/shouyeBJ.jpg');
     background-repeat: no-repeat;
+    background-size: 100% 105%;
 }
 
 h1 {
