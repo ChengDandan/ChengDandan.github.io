@@ -8,7 +8,7 @@ app.config(['$routeProvider',function($routeProvider){
   })
   .when('/dangdang',{
     templateUrl:'./asserts/tpl/dangdang.html',
-    controller:''
+    controller:'bookController'
   })
   .when('/boke',{
     templateUrl:'./asserts/tpl/boke.html',
