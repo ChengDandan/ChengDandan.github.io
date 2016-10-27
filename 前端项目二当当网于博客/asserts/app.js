@@ -23,7 +23,4 @@ app.config(['$routeProvider',function($routeProvider){
   //   templateUrl:'./assets/tpl/book_list.html',
   //   controller:'bookListController'
   // })
-  // .otherwise({
-  //   redirectTo:'/'
-  // });
 }]);
