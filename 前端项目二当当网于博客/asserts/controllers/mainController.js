@@ -8,4 +8,4 @@ app.controller('mainController',['$scope','commonService',function($scope,c_serv
     $scope.selectedIndex=index;
   };
 
-}])
+}]);
