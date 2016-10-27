@@ -7,16 +7,16 @@ app.config(['$routeProvider',function($routeProvider){
     controller:''
   })
   .when('/dangdang',{
-    templateUrl:'./tpl/dangdang.html',
+    templateUrl:'./asserts/tpl/dangdang.html',
     controller:''
   })
   .when('/boke',{
-    templateUrl:'./tpl/boke.html',
+    templateUrl:'./asserts/tpl/boke.html',
     controller:''
     // controller:'bookController'
   })
   .when('/tianqi',{
-    templateUrl:'./tpl/tianqi.html',
+    templateUrl:'./asserts/tpl/tianqi.html',
     controller:''
   })
   // .when('/book_list/:id',{
