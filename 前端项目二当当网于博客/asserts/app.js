@@ -18,12 +18,12 @@ app.config(['$routeProvider',function($routeProvider){
   .when('/tianqi',{
     templateUrl:'./asserts/tpl/tianqi.html',
     controller:''
-  })
+  });
   // .when('/book_list/:id',{
   //   templateUrl:'./assets/tpl/book_list.html',
   //   controller:'bookListController'
   // })
-  .otherwise({
-    redirectTo:'/'
-  });
+  // .otherwise({
+  //   redirectTo:'/'
+  // });
 }]);
