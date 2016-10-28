@@ -19,7 +19,7 @@ app.config(['$routeProvider',function($routeProvider){
     templateUrl:'./asserts/tpl/tianqi.html',
     controller:''
   })
-  .when('/book_list/:id,name',{
+  .when('/book_list/:id',{
     templateUrl:'./asserts/tpl/bookList.html',
     controller:'bookListController'
   });
