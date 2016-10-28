@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>成丹丹-前端开发工程师</title>
+	<link rel="stylesheet" href="lib/Velocity.js/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="lib/Velocity.js/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	<script src="lib/Velocity.js/js/modernizr.js"></script>
+	<script type="text/javascript" src="lib/echart/echarts.min.js"></script>
+</head>
+
+<body data-hijacking="on" data-animation="gallery">
+	<!--首页-->
+	<section class="cd-section visible">
+		<div class="home" name="home">
+			<div class="homeTitle"></div>
+		</div>
+	</section>
+	<!--个人简介-->
+	<section class="cd-section">
+		<div class="info">
+			<div class="nameApply">
+				<div class="name">Name:成丹丹</div>
+				<div class="apply">Apply for：Web前端工程师/h5开发工程师</div>
+			</div>
+			<div class="infoContainer">
+				<h1 class='am'>About Me</h1>
+				<div class="infoDetil">
+					<ul>
+						<li><span>学校:</span>西安科技大学</li>
+						<li><span>专业:</span>通信工程</li>
+						<li><span>学历:</span>本科</li>
+						<li><span>籍贯:</span>陕西省渭南市</li>
+						<li><span>出生年月:</span>1991-07-24</li>
+						<li><span>求职意向:</span>web前端开发工程师</li>
+						<li><span>外语水平:</span>CET-4</li>
+						<li><span>兴趣爱好:</span>电影、跑步、羽毛球、垒球</li>
+					</ul>
+				</div>
+				<div class="leaderboard">
+					<h1>部分奖项</h1>
+					<ol>
+						<li>
+							<mark>在校期间多次获得国家励志奖学金</mark>
+							<small>2011-2013</small>
+						</li>
+						<li>
+							<mark>校三好学生</mark>
+							<small>2013.11</small>
+						</li>
+						<li>
+							<mark>校三等奖学金</mark>
+							<small>2012.11</small>
+						</li>
+						<li>
+							<mark>校优秀学生干部</mark>
+							<small>2014.11</small>
+						</li>
+						<li>
+							<mark>社团活动积极分子</mark>
+							<small>2014.04</small>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="fs">
+				<div class="footAdd"></div>
+				<div class="ss-style-boxes"></div>
+			</div>
+		</div>
+	</section>
+	<!--技能掌握-->
+	<section class="cd-section">
+		<div class="skill">
+			<div class="skillContainer">
+				<div class="zbt">技能掌握</div>
+				<div class="fbt">熟悉前端，了解后端</div>
+				<div id="circleText"></div>
+				<div class="skillLIst">
+					<ul class="tech-skill-list">
+						<li class="tech-skill-list__item tech-skill-list__item-html-and-css tech-skill-list__item--mastered">
+							<h4 class="tech-skill-list__item__name">HTML(5) &amp; CSS(3)</h4>
+							<div class="tech-skill-list__item__detail">
+								<ul class="list">
+									<li>能使用合适的结构编写兼容主流浏览器的页面布局；模仿过一些网站的静态页面</li>
+									<li>了解HTML5新标签的语义；熟悉常见的标签节点</li>
+									<li>能熟练运用CSS3使页面在现代浏览器上效果更佳；</li>
+									<li>能熟练使用Chrome开发者工具、FireBug等工具辅助开发。</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-javascript tech-skill-list__item--mastered">
+							<h4 class="tech-skill-list__item__name">JavaScript &amp; jQuery</h4>
+							<div class="tech-skill-list__item__detail">
+								<ul class="list">
+									<li>熟练掌握原生Javascript</li>
+									<li>熟练掌握jQuery框架，提高开发效率；</li>
+									<li>能运用面向对象的思想编写js程序；</li>
+									<li>熟悉js的基础语法</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-bs tech-skill-list__item--mastered">
+							<h4 class="tech-skill-list__item__name">bootstrap</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>熟练掌握bootstrap框架；</li>
+									<li>能够运用bootstrap进行pc端和移动端的开发。</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-java tech-skill-list__item--practised">
+							<h4 class="tech-skill-list__item__name">前端ui框架</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>熟练使用各种ui框架，sui.mobile、weui、ionic等等</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-ajax tech-skill-list__item--practised">
+							<h4 class="tech-skill-list__item__name">ajax</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>掌握了ajax的概念和原理；</li>
+									<li>会写原生的ajax；</li>
+									<li>会使用主流库的封装的ajax方法以及参数，类似jQuery的$.ajax()。</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-sql tech-skill-list__item--practised">
+							<h4 class="tech-skill-list__item__name">MongoDB &amp; Local Storage</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>熟悉MongoDB数据库的基本操作</li>
+									<li>熟悉Local Storage的基本操作</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-photoshop">
+							<h4 class="tech-skill-list__item__name">Photoshop</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>能够熟练使用Photoshop切图；</li>
+									<li>能够进行带有原创性质的位图处理与渲染工作者优先</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-photoshop">
+							<h4 class="tech-skill-list__item__name">其它</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>熟悉前端MVVM框架，如：angular.js、vue.js；</li>
+									<li>熟悉XML，Jason和 Web Service 的基本概念，熟悉angularJS 等框架</li>
+									<li>有良好的编程习惯，理解面向对象思想，有一定的软件设计能力</li>
+									<li>具备较强的逻辑思维能力</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+	<!--作品展示-->
+	<section class="cd-section">
+		<div class="demoShow">
+			<div class="zbt">个人作品</div>
+			<div class="fbt" style="color: #fff;">越做越好，越做越多</div>
+			<div class="row">
+				<div class="single-member effect-7">
+					<div class="member-info">
+						<a href="../TV/Childhood Room.html"><h3>Childhood Room</h3></a>
+						<h5>HTML+CSS炫酷页面(没有用img)</h5>
+					</div>
+					<div class="member-image">
+						<img src="img/demo1.jpg">
+					</div>
+					<div class="more-info">
+						<p>实现了一个简单的动画，亮点在于没有使用img标签，实现了一个很炫酷的页面效果，主要功能有电视换台和风扇变速</p>
+					</div>
+				</div>
+				<div class="single-member effect-8">
+					<div class="member-info">
+						<a href="../blog-dangdang/index.html"><h3>一个综合的手机页面效果</h3></a>
+						<h5>个人博客和当当商品展示</h5>
+					</div>
+					<div class="member-image">
+						<img src="img/demo2.jpg">
+					</div>
+					<div class="more-info">
+						<p>该项目采用了html+css+jquery的技术进行页面的开发，通过单页面实现了一个手机页面效果，分为四大部分，主要用到了angular.js，jQuery框架，以及bootstrap，weui等第三方库</p>
+					</div>
+				</div>
+				<div class="single-member effect-9">
+					<div class="member-info">
+						<a href="http://www.jrsljj.com/"><h3>唯煌家具官方网站</h3></a>
+						<h5>一个家具品牌网站</h5>
+					</div>
+					<div class="member-image">
+						<img src="img/demo3.jpg">
+					</div>
+					<div class="more-info">
+						<p>	主要采用了html+css+jquery的技术进行页面的开发，包括静态页面的效果，标签页，动画效果，切换效果，以及二级菜单的实现
+							<br>
+								应用了表单验证的功能，实现了注册账户名在线进行验证，保证用户名的唯一性
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</section>
+	<!--个人能力与自我评价-->
+	<section class="cd-section">
+		<div class="personSkill">
+			<div class="zbt" style="color: snow;">自我概述</div>
+			<div class="fbt" style="color: #3755AD;">爱前端，肯吃苦，善思考</div>
+			<div class="psContainer">
+				<div class="pj">
+					<header class="title">优劣分析:</header>
+					<ol>
+						<li class="first">对web前端充满激情，热衷于开发优秀的web产品</li>
+						<li>注重团队协作，善于学习，乐于探索，敢于创新</li>
+						<li>对设计和交互非常感兴趣，开发产品善于从客户的角度去思考问题</li>
+						<li>学习能力强，思维活跃，接受新事物能力强；</li>
+						<li>极强的前端调试和问题解决能力</li>
+						<li>虽然英语只过了四级而且开发经验不足，但我会在将来的生活中用自己的行动克服这些问题</li>
+					</ol>
+					<header class="title">主观看法:</header>
+					<ol>
+						<li class="first">万物互联时代，h5将全面兼容移动设备，开发开发大潮即将来袭！</li>
+						<li>万众创新时代，车轮不可重复造，会用旧车轮更要会造新车轮！</li>
+					</ol>
+				</div>
+				<div class="echartContainer">
+					<header class="echartTitle">个人能力</header>
+					<div id="echart" style="width: 500px;height:500px;"></div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!--联系我-->
+	<section class="cd-section">
+		<div class="contactMe">
+			<div class="contactContainer">
+				<div class="zbt" style="color:#FE8F0A;">与我联系</div>
+				<div class="fbt" style="color: #5F9EA0;">别说话，收了我</div>
+
+				<!-- 轮播图效果 -->
+				<div class="lunbo">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval='10000'>
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="6"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="7"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="8"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="9"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="10"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="11"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="12"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="13"></li>
+							<!-- <li data-target="#carousel-example-generic" data-slide-to="5"></li> -->
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img src="img/1.png" alt="">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/2.png" alt="">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/3.png" alt="">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/4.png" alt="">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/5.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/6.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/7.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/8.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/9.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/10.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/11.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/12.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/13.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/14.png" alt="...">
+								<div class="carousel-caption">
+								</div>
+							</div>
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+
+
+				<!-- <video id="myVideo" src="resource/myVideo.mp4" poster="img/poster.png" controls ></video> -->
+				<div class="lxfs">
+					<header>联系方式</header>
+					<ul>
+						<li>通讯地址：陕西省渭南市</li>
+						<li>电话：18710339162</li>
+						<li>邮箱：m18710339162_2@163.com</li>
+					</ul>
+					<div class="chatLogo">
+						<img src="img/QQ.png" id="qq" />
+						<a href="https://chengdandan.github.io" target="view_window"><img src="img/github.png" /></a>
+						<a href="http://write.blog.csdn.net/postlist" target="view_window"><img src="img/CSDN.png" /></a>
+						<img src="img/wx.png" id="wx" />
+					</div>
+					<div class="downloadWrap">
+						<a id="download" href="resource/resumeLHF.pdf" download="个人简历—成丹丹">下载简历</a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+	<!--控制-->
+	<nav>
+		<ul class="cd-vertical-nav">
+			<li>
+				<a href="javascript:;" class="cd-prev inactive">Next</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="cd-next">Prev</a>
+			</li>
+		</ul>
+	</nav>
+
+	<script src="lib/Velocity.js/js/jquery-2.1.4.js"></script>
+	<script src="lib/Velocity.js/js/bootstrap.min.js"></script>
+	<script src="lib/Velocity.js/js/velocity.min.js"></script>
+	<script src="lib/Velocity.js/js/velocity.ui.min.js"></script>
+	<script src="lib/Velocity.js/js/main.js"></script>
+	<script type="text/javascript" src="lib/konva/konva.min.js"></script>
+	<script type="text/javascript" src="js/CircleText.js"></script>
+	<script type="text/javascript" src="lib/layer/layer.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
