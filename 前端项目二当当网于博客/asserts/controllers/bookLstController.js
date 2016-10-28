@@ -1,7 +1,8 @@
-var fs =require('fs');
-app.controller('bookListController',['$scope','$routeParams',function($scope,$routeParams){
-console.log($routeParams.id);
 
-$scope.arr = JSON.parse(fs.readFileSync(`./spider/data/book_{$routeParams.id}.json`).toString()) ;
+app.controller('bookListController',['$scope','commonService','$routeParams',function($scope,c_service,$routeParams){
+console.log($routeParams.id);
+c_service.getData($routeParams.id,function(res){
+  $scope.data=res.data;
+});
 
 }]);
