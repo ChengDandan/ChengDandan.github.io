@@ -1,6 +1,6 @@
 <h1>图书列表</h1>
 <div class="weui_cells weui_cells_access">
-    <a class="weui-cell" ng-repeat='item in bookType' ng-href='#/book_list/{{item.id}}'>
+    <a class="weui-cell" ng-repeat='item in bookType' ng-href='#/book_list/{{item.id,item.name}}'>
         <div class="weui-cell__hd">
             <img src="{{item.img}}" alt="" style="width:20px;margin-right:5px;display:block">
         </div>
