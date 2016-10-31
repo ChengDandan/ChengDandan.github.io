@@ -100,7 +100,7 @@ function getWeather(cityCode, cityName) {
             var html = template('table', {
                 list: arr
             });
-            document.querySelector('.container').innerHTML = html;
+            document.querySelector('.content').innerHTML = html;
           }
         },
         error: function(error) {
