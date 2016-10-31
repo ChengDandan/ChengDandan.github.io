@@ -1,110 +1,124 @@
-getCityCode("合阳");
+// http默认端口号为80  https的默认端口号为443
+// getWeatherInfo("合阳");
+function doSearch(){
 
-function doSearch() {
-    if (document.querySelector('input').value == '') {
-        return;
+  var cityname =document.querySelector('#cityname').value;
+  getWeatherInfo(cityname);
+
+
+}
+// 获取cityCode
+function getWeatherInfo(cityName){
+  $.ajax({
+    url:"http://apis.baidu.com/apistore/weatherservice/cityinfo",
+    data:{cityname:cityName},
+    method:"get",
+    headers:{
+      apikey:"64a2f41e141acc3822cc08e05a7853ae",
+
+    },
+    dataType:'json',
+    success:function(cityInfo){
+      // console.log(cityInfo.retData['cityCode']);
+    // return(cityInfo.retData['cityCode']);
+
+    getCityCodeAndCityName((cityInfo.retData['cityCode']),(cityInfo.retData['cityName']));
+
+
+
+    },
+    error:function(err){
+      console.log(err);
+
     }
-    getCityCode(document.querySelector('input').value);
+  });
+
 }
 
-function getCityCode(aName) {
+// 获取未来四天 ，历史七天 以及今天的天气信息
+function getCityCodeAndCityName(cityCode,cityName){
+$.ajax({
+  url:"http://apis.baidu.com/apistore/weatherservice/recentweathers",
+  method:"get",
+  data:{cityname:cityName,cityid:cityCode},
+  headers:{
+    apikey:"64a2f41e141acc3822cc08e05a7853ae",
+  },
+  dataType:'json',
+  success:function(data){
+      console.log(data);
+      // 未来天气
+      var forecastCityArr =data.retData['forecast'];
+    var arr=[];
+    forecastCityArr.forEach(function(item){
+      // console.log(item);
+      var obj ={};
 
-    $.ajax({
-        url: 'http://apis.baidu.com/apistore/weatherservice/cityinfo',
-        method: 'get',
-        data: {
-            cityname: aName
-        },
-        headers: {
-            apikey: 'dcf73b6701aa5c1977781c258abb186c'
-        },
-        dataType: 'json',
-        success: function(res) {
-          if (res.errNum==0) {
-            cityCode = res.retData["cityCode"];
-            getWeather(cityCode, aName);
-          }else {
-            alert(res.errMsg);
-          }
+      obj.date=item.date;
+      // console.log(obj.date);
+      obj.week=item.week;
+      obj.hightemp=item.hightemp;
+      obj.lowtemp =item.lowtemp;
+      obj.fengli=item.fengli;
+      obj.fengxiang=item.fengxiang;
+      obj.type=item.type;
+      arr.push(obj);
 
-        },
-        error: function(error) {
-            alert(error);
-        }
     });
-}
+    var arr1 =[];
+    for(var obj=arr.length-1;obj>=0;obj--){
+      arr1.push(arr[obj]);
 
-function getWeather(cityCode, cityName) {
-  var arr = [];
-    $.ajax({
-        url: 'http://apis.baidu.com/apistore/weatherservice/recentweathers',
-        method: 'get',
-        data: {
-            cityname: cityName,
-            cityid: cityCode
-        },
-        headers: {
-            apikey: 'dcf73b6701aa5c1977781c258abb186c'
-        },
-        dataType: 'json',
-        success: function(res) {
-          console.log(res.errMsg);
-          if (res.Num==-1) {
-            alert(res.errMsg);
-          }else {
-            document.querySelector('h1').innerText = cityName + "天气状况";
-            // var keys = Object.keys(res.retData);
-            var forecast = res.retData['forecast'];
+    }
+    // console.log(arr1);
 
-            for (var i = forecast.length - 1; i > -1; i--) {
-                var wea = {};
-                wea.date = "未来第" + (i + 1) + "天";
-                wea.day = forecast[i].date;
-                wea.fengxiang = forecast[i].fengxiang;
-                wea.fengli = forecast[i].fengli;
-                wea.hightemp = forecast[i].hightemp;
-                wea.lowtemp = forecast[i].lowtemp;
-                wea.type = forecast[i].type;
-                wea.week = forecast[i].week;
-                arr.push(wea);
-            }
-            todaywea(res.retData['today']);
 
-            function todaywea(today) {
-                var wea = {};
-                wea.date = "今天";
-                wea.day = today.date;
-                wea.fengxiang = today.fengxiang;
-                wea.fengli = today.fengli;
-                wea.hightemp = today.hightemp;
-                wea.lowtemp = today.lowtemp;
-                wea.type = today.type;
-                wea.week = today.week;
-                arr.push(wea);
-            }
-            var history = res.retData['history'];
-            var m = 1;
-            for (var i = history.length - 1; i > -1; i--) {
-                var wea = {};
-                wea.date = "过去第" + m + "天";
-                m++;
-                wea.day = history[i].date;
-                wea.fengxiang = history[i].fengxiang;
-                wea.fengli = history[i].fengli;
-                wea.hightemp = history[i].hightemp;
-                wea.lowtemp = history[i].lowtemp;
-                wea.type = history[i].type;
-                wea.week = history[i].week;
-                arr.push(wea);
-            }
-            var html = template('table', {
-                list: arr
-            });
-            document.querySelector('.content').innerHTML = html;
-          }
-        },
-        error: function(error) {
-            alert(error);
-        }
-    });
+
+// 今天天气查询
+    var todayCityArr =data.retData['today'];
+  // console.log(todayCityArr);
+    var obj ={};
+
+    obj.date=todayCityArr.date;
+    // console.log(obj.date);
+    obj.week=todayCityArr.week;
+    obj.hightemp=todayCityArr.hightemp;
+    obj.lowtemp =todayCityArr.lowtemp;
+    obj.fengli=todayCityArr.fengli;
+    obj.fengxiang=todayCityArr.fengxiang;
+    obj.type=todayCityArr.type;
+    arr1.push(obj);
+
+
+    // 历史天气查询
+    var historyCityArr =data.retData['history'];
+
+
+  historyCityArr.forEach(function(item){
+    // console.log(item);
+    var obj ={};
+
+    obj.date=item.date;
+    // console.log(obj.date);
+    obj.week=item.week;
+    obj.hightemp=item.hightemp;
+    obj.lowtemp =item.lowtemp;
+    obj.fengli=item.fengli;
+    obj.fengxiang=item.fengxiang;
+    obj.type=item.type;
+    arr1.push(obj);
+
+  });
+
+    // console.log(arr1);
+    var html =template('text',{list:arr1});
+    document.querySelector('#content').innerHTML=html;
+
+
+  },
+  error:function(err){
+    console.log(err);
+  },
+
+});
 }
