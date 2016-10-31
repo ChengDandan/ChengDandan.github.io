@@ -14,7 +14,7 @@ function getWeatherInfo(cityName){
     data:{cityname:cityName},
     method:"get",
     headers:{
-      apikey:"64a2f41e141acc3822cc08e05a7853ae",
+      apikey:"dcf73b6701aa5c1977781c258abb186c",
 
     },
     dataType:'json',
